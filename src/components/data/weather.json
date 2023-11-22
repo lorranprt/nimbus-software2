@@ -1,0 +1,113 @@
+[
+    {
+      "Data": "2023-11-22T12:00:00Z",
+      "Sumário": "Limpo",
+      "Tipo de Precipitação": "Chuva",
+      "Temperatura (Celsius)": 25,
+      "Temperatura Aparente (Celsius)": 27,
+      "Umidade": 60,
+      "Velocidade do Vento (km/h)": 15,
+      "Visibilidade (km)": 10,
+      "Resumo Diário": "Um dia claro com chuva ocasional."
+    },
+    {
+      "Data": "2023-11-23T15:30:00Z",
+      "Sumário": "Parcialmente Nublado",
+      "Tipo de Precipitação": "Neve",
+      "Temperatura (Celsius)": -5,
+      "Temperatura Aparente (Celsius)": -10,
+      "Umidade": 80,
+      "Velocidade do Vento (km/h)": 8,
+      "Visibilidade (km)": 5,
+      "Resumo Diário": "Parcialmente nublado com queda de neve leve."
+    },
+    {
+      "Data": "2023-11-24T08:45:00Z",
+      "Sumário": "Nublado",
+      "Tipo de Precipitação": "Garoa",
+      "Temperatura (Celsius)": 18,
+      "Temperatura Aparente (Celsius)": 18,
+      "Umidade": 75,
+      "Velocidade do Vento (km/h)": 10,
+      "Visibilidade (km)": 8,
+      "Resumo Diário": "Dia nublado com garoa leve."
+    },
+    {
+      "Data": "2023-11-25T14:20:00Z",
+      "Sumário": "Limpo",
+      "Tipo de Precipitação": "Nenhuma",
+      "Temperatura (Celsius)": 30,
+      "Temperatura Aparente (Celsius)": 32,
+      "Umidade": 50,
+      "Velocidade do Vento (km/h)": 20,
+      "Visibilidade (km)": 12,
+      "Resumo Diário": "Dia ensolarado e quente sem precipitação."
+    },
+    {
+      "Data": "2023-11-26T18:10:00Z",
+      "Sumário": "Tempestades",
+      "Tipo de Precipitação": "Tempestade",
+      "Temperatura (Celsius)": 22,
+      "Temperatura Aparente (Celsius)": 25,
+      "Umidade": 85,
+      "Velocidade do Vento (km/h)": 30,
+      "Visibilidade (km)": 5,
+      "Resumo Diário": "Tempestades com chuva intensa."
+    },
+    {
+      "Data": "2023-11-27T09:40:00Z",
+      "Sumário": "Limpo",
+      "Tipo de Precipitação": "Chuva",
+      "Temperatura (Celsius)": 25,
+      "Temperatura Aparente (Celsius)": 27,
+      "Umidade": 60,
+      "Velocidade do Vento (km/h)": 15,
+      "Visibilidade (km)": 10,
+      "Resumo Diário": "Um dia claro com chuva ocasional."
+    },
+    {
+      "Data": "2023-11-28T11:15:00Z",
+      "Sumário": "Parcialmente Nublado",
+      "Tipo de Precipitação": "Neve",
+      "Temperatura (Celsius)": -5,
+      "Temperatura Aparente (Celsius)": -10,
+      "Umidade": 80,
+      "Velocidade do Vento (km/h)": 8,
+      "Visibilidade (km)": 5,
+      "Resumo Diário": "Parcialmente nublado com queda de neve leve."
+    },
+    {
+      "Data": "2023-11-29T16:00:00Z",
+      "Sumário": "Nublado",
+      "Tipo de Precipitação": "Garoa",
+      "Temperatura (Celsius)": 18,
+      "Temperatura Aparente (Celsius)": 18,
+      "Umidade": 75,
+      "Velocidade do Vento (km/h)": 10,
+      "Visibilidade (km)": 8,
+      "Resumo Diário": "Dia nublado com garoa leve."
+    },
+    {
+      "Data": "2023-11-30T13:45:00Z",
+      "Sumário": "Limpo",
+      "Tipo de Precipitação": "Nenhuma",
+      "Temperatura (Celsius)": 30,
+      "Temperatura Aparente (Celsius)": 32,
+      "Umidade": 50,
+      "Velocidade do Vento (km/h)": 20,
+      "Visibilidade (km)": 12,
+      "Resumo Diário": "Dia ensolarado e quente sem precipitação."
+    },
+    {
+      "Data": "2023-12-01T20:05:00Z",
+      "Sumário": "Tempestades",
+      "Tipo de Precipitação": "Tempestade",
+      "Temperatura (Celsius)": 22,
+      "Temperatura Aparente (Celsius)": 25,
+      "Umidade": 85,
+      "Velocidade do Vento (km/h)": 30,
+      "Visibilidade (km)": 5,
+      "Resumo Diário": "Tempestades com chuva intensa."
+    }
+  ]
+  
