@@ -10,10 +10,24 @@ const ChartComponent = () => {
     labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
     datasets: [
       {
-        label: "Medida Genrica",
+        label: "Chuva",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
+      },
+      {
+        label: "Umidade",
+        data: [7, 6, 20, 8, 4, 16],
+        backgroundColor: "rgba(165, 75, 192, 0.2)",
+        borderColor: "#bca5c0",
+        borderWidth: 1,
+      },
+      {
+        label: "Temperatura",
+        data: [3, 16, 8, 12, 6, 2],
+        backgroundColor: "rgba(192, 75, 75, 0.2)",
+        borderColor: "#c0704b",
         borderWidth: 1,
       },
     ],
