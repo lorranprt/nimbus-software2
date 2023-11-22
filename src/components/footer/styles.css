@@ -1,7 +1,12 @@
 .footer {
-    background-color: #8da6b1;
-    padding: 0px;
+    background-color: #8da6b1e1;
+    padding: 3px;
     text-align: center;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+    width: auto;
+    height: 90px;
+
   }
   
 

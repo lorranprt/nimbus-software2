@@ -11,7 +11,6 @@ const Header = () => {
   return (
     <HeaderContainer>
       <img src={ require('./assets/logoNimbus.png') } />
-      
     </HeaderContainer>
   );
 };

@@ -10,7 +10,7 @@ const ChartComponent = () => {
     labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
     datasets: [
       {
-        label: "Medida Genérica",
+        label: "Medida Genrica",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -72,7 +72,7 @@ const ChartComponent = () => {
   };
 
   return (
-    <div style={{ height: "80vh", padding: "5vw" }}>
+    <div style={{ height: "100vh", padding: "15vw" }}>
       <h1>Grafico</h1>
       <canvas id="myChart"></canvas>
       <button class='myButton'onClick={exportToPDF}>Exportar para PDF</button>
