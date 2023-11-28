@@ -6,52 +6,67 @@ import "./chart.css";
 
 const ChartComponent = () => {
   const chartRef = useRef(null);
+
+    const meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+
   const [chartData] = useState({
-    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
+    labels: meses,
     datasets: [
       {
-        label: "Chuva",
-        data: [12, 19, 3, 5, 2, 3],
+        label: "Chuva (mm)",
+        data: [50, 80, 120, 70, 90, 60, 30, 45, 85, 110, 75, 60],
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
       },
       {
-        label: "Umidade",
-        data: [7, 6, 20, 8, 4, 16],
+        label: "Umidade (%)",
+        data: [65, 70, 80, 75, 85, 60, 40, 55, 75, 90, 70, 55],
         backgroundColor: "rgba(165, 75, 192, 0.2)",
         borderColor: "#bca5c0",
         borderWidth: 1,
       },
       {
-        label: "Temperatura",
-        data: [3, 16, 8, 12, 6, 2],
+        label: "Temperatura (°C)",
+        data: [22, 24, 26, 20, 18, 22, 28, 30, 26, 24, 20, 18],
         backgroundColor: "rgba(192, 75, 75, 0.2)",
         borderColor: "#c0704b",
+        borderWidth: 1,
+      },
+      {
+        label: "Velocidade do Vento (km/h)",
+        data: [10, 12, 15, 8, 10, 14, 18, 20, 16, 12, 10, 8],
+        backgroundColor: "rgba(255, 206, 86, 0.2)",
+        borderColor: "#ffee00",
+        borderWidth: 1,
+      },
+      {
+        label: "Visibilidade (km)",
+        data: [20, 18, 16, 22, 25, 20, 15, 18, 20, 22, 25, 20],
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "#369edb",
+        borderWidth: 1,
+      },
+      {
+        label: "Temperatura Aparente (°C)",
+        data: [23, 25, 28, 22, 20, 23, 30, 32, 28, 25, 22, 20],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "#ff6384",
         borderWidth: 1,
       },
     ],
   });
 
-  useEffect(() => {
-    const ctx = document.getElementById("myChart").getContext("2d");
-
-    if (chartRef.current) {
-      chartRef.current.destroy();
-    }
-
-    chartRef.current = new Chart(ctx, {
-      type: "bar",
-      data: chartData,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
+  const chartOptions = {
+    scales: {
+      y: {
+        beginAtZero: true,
       },
-    });
-  }, [chartData]);
+    },
+  };
 
   const exportToPDF = () => {
     const canvas = document.getElementById("myChart");
@@ -73,9 +88,10 @@ const ChartComponent = () => {
   const exportToCSV = () => {
     const { labels, datasets } = chartData;
     const csvData =
-      labels.join(",") +
-      "\n" +
-      datasets[0].data.join(",");
+      `Meses,${labels.join(",")}\n` +
+      `${datasets[0].label},${datasets[0].data.join(",")}\n` +
+      `${datasets[1].label},${datasets[1].data.join(",")}\n` +
+      `${datasets[2].label},${datasets[2].data.join(",")}`;
 
     const blob = new Blob([csvData], { type: "text/csv" });
 
@@ -85,12 +101,28 @@ const ChartComponent = () => {
     link.click();
   };
 
+  useEffect(() => {
+    const ctx = document.getElementById("myChart").getContext("2d");
+  
+    if (chartRef.current) {
+      chartRef.current.destroy();
+    }
+  
+    chartRef.current = new Chart(ctx, {
+      type: "bar",
+      data: chartData,
+      options: chartOptions,
+    });
+  }, [chartData, chartOptions]);
+
   return (
-    <div style={{ height: "100vh", padding: "15vw" }}>
-      <h1>Grafico</h1>
+    <div style={{ height: "100vh", padding: "5vw" }}>
+      <h1>Condições Meteorológicas</h1>
       <canvas id="myChart"></canvas>
-      <button class='myButton'onClick={exportToPDF}>Exportar para PDF</button>
-      <button class='myButton' onClick={exportToCSV}>Exportar para CSV</button>
+      <div style={{ marginTop: "20px" }}>
+        <button className='myButton' onClick={exportToPDF}>Exportar para PDF</button>
+        <button className='myButton' onClick={exportToCSV}>Exportar para CSV</button>
+      </div>
     </div>
   );
 };
