@@ -5,6 +5,8 @@ import MapComponent from './components/map/map';
 import ChartComponent from './components/grafico/chart';
 import TableComponent from './components/table/table'; 
 import styled from 'styled-components';
+import FilterComponent from './components/Filter/filter';
+
 
 const App = () => {
   const [selectedFormat, setSelectedFormat] = useState('map'); 
@@ -37,6 +39,8 @@ const App = () => {
 
   const renderSelectedComponent = () => {
     switch (selectedFormat) {
+      case 'filter':
+        return <FilterComponent/>;
       case 'map':
         return <MapComponent />;
       case 'graph':
@@ -59,6 +63,7 @@ const App = () => {
                 value={selectedFormat}
                 onChange={handleFormatChange}
               >
+                <option value="filter">Filtro</option>
                 <option value="map">Mapa</option>
                 <option value="graph">Grafico</option>
                 <option value="table">Tabela</option>
@@ -68,7 +73,7 @@ const App = () => {
         </CenteredContainer>
             {renderSelectedComponent()}
       </main>
-      <Footer />
+
     </div>
   );
 };

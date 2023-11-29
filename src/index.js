@@ -5,42 +5,67 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import styled from 'styled-components';
+import Header from './components/header'; 
+import Historico from './Historico'
 
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 600px;
-  margin: 20px auto;
+
+
+const StyledUl = styled.ul`
+  margin-left : 15px;
+  display : flex;
+  flex-direction : column;
+
 `;
 
-const Texto = styled.div`
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+const StyledLi = styled.li`
+  margin : 5px;
+
 `;
 
-const Botao = styled(Link)`
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-`;
+const H2 = styled.h2`
+  margin-left: 20px;
+
+`
+
+const StyledH1 = styled.h1`
+  margin-left: 20px;
+
+`
+
+const StyledP = styled.p`
+margin-left: 20px;
+font-size: 20px;
+
+`
+
+const StyledDiv = styled.div`
+  
+`
+
+
 
 function Index() {
   return (
     <div>
-      <h2>Página Inicial</h2>
-      <GridContainer>
-        <Texto>Texto 1</Texto>
-        <Texto>Texto 2</Texto>
-        <Texto>Texto 3</Texto>
-        <Texto>Texto 4</Texto>
-      </GridContainer>
-      <Botao to="/app">Ir para App</Botao>
+      <Header/>
+      <StyledDiv>
+      <StyledH1>
+        Projeto Front-End
+      </StyledH1>
+      <StyledP>
+        O objetivo dessa página é propor um protótipo para o Histórico de Dados da empresa Nimbus Meteorologia.
+      </StyledP>
+      <H2>Grupo 4D:</H2>
+      <StyledUl>
+        <StyledLi>Guilherme Vallim</StyledLi>
+        <StyledLi>Hannah Martins</StyledLi>
+        <StyledLi>João Gois</StyledLi>
+        <StyledLi>Lorran Porto</StyledLi>
+      </StyledUl>
+      </StyledDiv>
+      
     </div>
+    
   );
 }
 
@@ -52,6 +77,7 @@ root.render(
       <Routes>
         <Route path="/app" element={<App />} />
         <Route path="/" element={<Index />} />
+        <Route path="/Historico" element={<Historico />} />
       </Routes>
     </Router>
   </React.StrictMode>
