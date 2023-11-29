@@ -10,6 +10,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+  
   .filter-input {
     grid-column: span 1;
   }
@@ -27,7 +28,7 @@
     box-sizing: border-box;
   }
 
-  
+
   button {
     grid-column: span 2;
     background-color: #4caf50;

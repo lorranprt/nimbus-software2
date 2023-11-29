@@ -11,6 +11,7 @@ const FooterContainer = styled.footer`
 `;
 
 
+
 const Footer = () => {
   return (
     <FooterContainer className="footer" style={{ padding: "20px" }}>

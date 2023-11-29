@@ -15,6 +15,7 @@ column-rule: 3px double #000000;
 border-bottom: 10px;
 `;
 
+
 const CardContainer = styled.div`
 width: 300px;
 margin: auto;
