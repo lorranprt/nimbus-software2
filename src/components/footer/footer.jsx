@@ -13,6 +13,7 @@ background-color: #110438;
 `;
 
 
+
 const Footer = () => {
   return (
     <FooterContainer className="footer" style={{ padding: "20px" }}> 

@@ -12,6 +12,7 @@ const customMarker = new Icon({
   iconSize: [30, 30],
 });
 
+
 const createClusterIcon = (cluster) => {
   return new divIcon({
     html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
